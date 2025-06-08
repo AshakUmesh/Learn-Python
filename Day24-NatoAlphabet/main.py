@@ -3,6 +3,7 @@ import pandas
 data = pandas.read_csv("nato_phonetic_alphabet.csv")
 dic = {row.letter : row.code for (index , row) in data.iterrows()}
 
+
 def gen_phenetic():
     input_name = input("Enter a word: ").upper()
     try:
@@ -14,3 +15,5 @@ def gen_phenetic():
         print(phonetic_list)
 
 gen_phenetic()
+
+
