@@ -6,7 +6,7 @@ import List
 import random
 windows = Tk()
 windows.title("Password Manager")
-windows.config(padx=100, pady=50)
+windows.config(padx=100, pady=50,bg="black")
 
 def add_password():
     """This funtion is used to add password toi a file """
@@ -60,26 +60,26 @@ def generate_password():
 
 
 # ----------------------------------------setup UI-----------------------------------------------------
-canvas = tkinter.Canvas(width=200, height=224, highlightthickness=0)
+canvas = tkinter.Canvas(width=200, height=224, highlightthickness=0,bg="black")
 lock_img = tkinter.PhotoImage(file="logo.png")
 canvas.create_image(100, 112, image=lock_img)
 canvas.grid(row=0, column=1)
-website_label = Label(text="Website:")
+website_label = Label(text="Website:",bg="black",fg="white", font=("Segoe UI", 10))
 website_label.grid(row=1, column=0)
 website_name_input = Entry(width=35)
 website_name_input.grid(row=1, column=1, columnspan=2)
 website_name_input.focus()
-email_name = Label(text="Email/Username:")
+email_name = Label(text="Email/Username:",bg="black",fg="white", font=("Segoe UI", 10))
 email_name.grid(row=2, column=0)
 email_name_input = Entry(width=35)
 email_name_input.grid(row=2, column=1, columnspan=2)
-password_label = Label(text="Password:")
+password_label = Label(text="Password:",bg="black",fg="white", font=("Segoe UI", 10))
 password_label.grid(row=3, column=0)
-password_input = Entry(width=21)
+password_input = Entry(width=25)
 password_input.grid(row=3, column=1)
-password_generate = Button(text="Generate Password",command=generate_password)
+password_generate = Button(text="Generate Password",command=generate_password, bg="#5dbea3", fg="white")
 password_generate.grid(row=3, column=2)
-add_button = Button(text="Add", width=36,command=add_password)
+add_button = Button(text="Add", width=36,command=add_password, bg="#5dbea3", fg="white")
 add_button.grid(row=4, column=1, columnspan=2)
 
 windows.mainloop()
