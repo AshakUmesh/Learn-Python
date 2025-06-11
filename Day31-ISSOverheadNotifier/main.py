@@ -1,3 +1,4 @@
+
 import requests
 from datetime import datetime
 import smtplib
@@ -46,5 +47,3 @@ while True:
         message = "Subject:Look Up👆\n\nThe ISS is above you in the sky!"
         connection.sendmail(from_addr="ashakumesh2020@gmail.com", to_addrs="ashakumesh2020@gmail.com",
                             msg=message)
-
-
