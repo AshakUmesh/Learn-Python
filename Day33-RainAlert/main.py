@@ -27,7 +27,7 @@ if will_rain:
     message = client.messages.create(
         from_="whatsapp:+14155238886",
         body="🌧 It's going to rain today. Remember to bring an umbrella ☔!",
-        to="whatsapp:+919745179901"
+        to=os.environ.get("NUMBER")
     )
 
 
