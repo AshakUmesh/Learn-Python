@@ -1,54 +1,65 @@
 import requests
-from datetime import datetime
 import os
 from dotenv import load_dotenv
 
+load_dotenv(dotenv_path="API_keys.env")
+
+IATA_ENDPOINT = "https://test.api.amadeus.com/v1/reference-data/locations/cities"
+FLIGHT_ENDPOINT = "https://test.api.amadeus.com/v2/shopping/flight-offers"
 TOKEN_ENDPOINT = "https://test.api.amadeus.com/v1/security/oauth2/token"
 
 
 class FlightSearch:
-    def __init__(self):
-        self.amadeus_api_key = "TNKaouYxySccuK9M2oWdcNkYohVyyPAA"
-        self.amadeus_api_secret = "u4BqMs5bBkLtGh8e"
-        self.token = self.get_new_token()
 
-    def get_new_token(self):
+    def __init__(self):
+        self._api_key = os.getenv("AMADEUS_API_KEY")
+        self._api_secret = os.getenv("AMADEUS_CLIENT_SECRET")
+        self._token = self._get_new_token()
+
+    def _get_new_token(self):
         header = {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            "Content-Type": "application/x-www-form-urlencoded"
         }
         body = {
             'grant_type': 'client_credentials',
-            'client_id': self.amadeus_api_key,
-            'client_secret': self.amadeus_api_secret
+            'client_id': self._api_key,
+            'client_secret': self._api_secret
         }
         response = requests.post(url=TOKEN_ENDPOINT, headers=header, data=body)
-        print(f"Your token is {response.json()['access_token']}")
-        print(f"Your token expires in {response.json()['expires_in']} seconds")
+        print(response.status_code)
+        #print(f"Your token is {response.json()['access_token']}")
+        #print(f"Your token expires in {response.json()['expires_in']} seconds")
         return response.json()['access_token']
 
     def get_destination_code(self, city_name):
-        print(f"Using this token to get destination {self.token}")
-        headers = {"Authorization": f"Bearer {self.token}"}
-        params = {
+        print(f"Using this token to get destination {self._token}")
+        headers = {"Authorization": f"Bearer {self._token}"}
+
+        query = {
             "keyword": city_name,
-            "subType": "CITY,AIRPORT",
-            "page[limit]": 2
+            "max": "2",
+            "include": "AIRPORTS",
         }
         response = requests.get(
-            url="https://test.api.amadeus.com/v1/reference-data/locations",
+            url=IATA_ENDPOINT,
             headers=headers,
-            params=params
+            params=query
         )
-
+        print(response.request.headers)
         print(f"Status code {response.status_code}. Airport IATA: {response.text}")
         try:
-            return response.json()["data"][0]['iataCode']
-        except (IndexError, KeyError):
-            print(f"No IATA code found for {city_name}.")
+            code = response.json()["data"][0]['iataCode']
+        except IndexError:
+            print(f"IndexError: No airport code found for {city_name}.")
             return "N/A"
+        except KeyError:
+            print(f"KeyError: No airport code found for {city_name}.")
+            return "Not Found"
+
+        return code
 
     def check_flights(self, origin_city_code, destination_city_code, from_time, to_time):
-        headers = {"Authorization": "Bearer fdgfsdbfdsgfdgdfgfdgdfgfdgdfvbbb"}
+        headers = {"Authorization": f"Bearer {self._token}"}
         query = {
             "originLocationCode": origin_city_code,
             "destinationLocationCode": destination_city_code,
@@ -61,7 +72,7 @@ class FlightSearch:
         }
 
         response = requests.get(
-            url="https://test.api.amadeus.com/v2/shopping/flight-offers",
+            url=FLIGHT_ENDPOINT,
             headers=headers,
             params=query,
         )
@@ -76,4 +87,3 @@ class FlightSearch:
             return None
 
         return response.json()
-
