@@ -1,6 +1,8 @@
 body {
             background-color: #f9f9f9;
             font-family: "Segoe UI", sans-serif;
+            background-image:url("bg.jpeg");
+            background-size:cover;
             display: flex;
             justify-content: center;
             align-items: center;

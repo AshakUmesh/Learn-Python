@@ -2,6 +2,7 @@
            body {
                 font-family: "Segoe UI", sans-serif;
                 background: #f4f7f8;
+                background-image:url("bg.jpeg");
                 display: flex;
                 justify-content: center;
                 align-items: center;
