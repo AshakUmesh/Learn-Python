@@ -1,0 +1,38 @@
+body {
+            background-color: #f9f9f9;
+            font-family: "Segoe UI", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+        }
+
+        iframe {
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3f51b5;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
