@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | My Portfolio{% endblock %}
+
+{% block content %}
+  <section class="contact-section">
+    <div class="container contact-wrapper">
+      <header class="contact-header">
+        <p class="contact-kicker">Get in Touch</p>
+        <h1>Have a question or want to work together?</h1>
+        <p class="contact-subtitle">
+          I’d love to hear from you. Choose a way to reach out that works best
+          for you.
+        </p>
+        <div class="contact-badges">
+          <span class="pill pill-primary">Available for opportunities</span>
+          <span class="pill pill-ghost">Responds within 24 hours</span>
+        </div>
+      </header>
+
+      <section class="contact-main-card">
+        <div class="contact-main-grid">
+          <div class="contact-meetings">
+            <h2>Schedule a Meeting</h2>
+            <p class="contact-note-text">
+              Interested in discussing opportunities? Book a convenient time to
+              connect.
+            </p>
+            <div class="meeting-types">
+              <div class="meeting-card">
+                <h3>Recruiter Call</h3>
+                <p>20 minutes</p>
+              </div>
+              <div class="meeting-card">
+                <h3>Technical Discussion</h3>
+                <p>45 minutes</p>
+              </div>
+              <div class="meeting-card">
+                <h3>Coffee Chat</h3>
+                <p>15 minutes</p>
+              </div>
+            </div>
+            <button class="btn primary contact-btn-full">
+              Request a Meeting Time
+            </button>
+            <p class="contact-meta">
+              Available Monday–Friday, 9 AM – 6 PM (IST)
+            </p>
+          </div>
+
+          <div class="contact-columns">
+            <div class="contact-info-column">
+              <h2>Contact Information</h2>
+              <div class="contact-info-list">
+                <div class="contact-info-card">
+                  <h3>Email</h3>
+                  <p>your.email@example.com</p>
+                </div>
+                <div class="contact-info-card">
+                  <h3>Phone</h3>
+                  <p>+91 0000000000</p>
+                </div>
+                <div class="contact-info-card">
+                  <h3>Location</h3>
+                  <p>Your City, India</p>
+                </div>
+              </div>
+
+              <h2 class="contact-subheading">Connect on Social Media</h2>
+              <div class="contact-social-grid">
+                <a href="#" class="contact-social-card">LinkedIn</a>
+                <a href="#" class="contact-social-card">GitHub</a>
+              </div>
+
+              <div class="contact-info-card contact-location-card">
+                <h3>Based in</h3>
+                <p>Your City, India</p>
+                <p class="contact-meta">Available for remote opportunities</p>
+              </div>
+            </div>
+
+            <div class="contact-form-column">
+              <h2>Send a Message</h2>
+              <form class="contact-form" action="#" method="post">
+                <label>
+                  Your Name
+                  <input type="text" name="name" placeholder="John Doe" />
+                </label>
+                <label>
+                  Your Email
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                  />
+                </label>
+                <label>
+                  Message
+                  <textarea
+                    name="message"
+                    rows="4"
+                    placeholder="Your message here..."
+                  ></textarea>
+                </label>
+                <button type="submit" class="btn primary contact-btn-full">
+                  Send Message
+                </button>
+              </form>
+
+              <div class="contact-info-card contact-response-card">
+                <h3>Response Time</h3>
+                <p>
+                  I typically respond to messages within 24–48 hours. For urgent
+                  matters, please feel free to reach out via phone or email
+                  directly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-footer-cta">
+        <h2>Looking for Collaboration?</h2>
+        <p>
+          I’m always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision.
+        </p>
+        <div class="contact-footer-actions">
+          <a href="mailto:your.email@example.com" class="btn">
+            Email Me
+          </a>
+          <a href="#" class="btn primary">
+            Connect on LinkedIn
+          </a>
+        </div>
+      </section>
+    </div>
+  </section>
+{% endblock %}

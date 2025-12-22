@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Home | My Portfolio{% endblock %}
+
+{% block content %}
+  <section class="home-section">
+    <div class="container home-wrapper">
+      <header class="home-hero">
+        <div class="home-hero-text">
+          <div class="home-badges">
+            <span class="pill pill-primary">Available for opportunities</span>
+            <span class="pill pill-ghost">Open to internships &amp; junior roles</span>
+          </div>
+          <h1>Ashak Umesh</h1>
+          <p class="home-subtitle">
+            M.Tech student in Information Security | Full‑Stack Developer
+          </p>
+          <p class="home-summary">
+            Results‑driven developer with a strong foundation in full‑stack
+            development, machine learning basics, and cybersecurity concepts.
+          </p>
+          <div class="home-hero-actions">
+            <a href="{{ url_for('main.resume') }}" class="btn primary">View Resume</a>
+            <a href="{{ url_for('main.contact') }}" class="btn">Contact Me</a>
+          </div>
+        </div>
+        <div class="home-hero-photo">
+          <div class="hero-photo-frame">
+            <img
+              src="{{ url_for('static', filename='images/profile.jpg') }}"
+              alt="Photo of Your Name"
+              class="hero-photo-main"
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="home-highlight-grid">
+        <article class="home-highlight-card">
+          <h2>80%</h2>
+          <p>Deepfake Detection</p>
+        </article>
+        <article class="home-highlight-card">
+          <h2>3+</h2>
+          <p>Major Projects</p>
+        </article>
+        <article class="home-highlight-card">
+          <h2>Skills</h2>
+          <p>Full‑stack &amp; Security</p>
+        </article>
+        <article class="home-highlight-card">
+          <h2>M.Tech</h2>
+          <p>Information Security</p>
+        </article>
+      </section>
+
+      <section class="home-section-block">
+        <h2>Technical Stack</h2>
+        <div class="home-chip-row">
+          <span class="projects-tag">Python</span>
+          <span class="projects-tag">Flask</span>
+          <span class="projects-tag">JavaScript</span>
+          <span class="projects-tag">React (basic)</span>
+          <span class="projects-tag">Express (basic)</span>
+          <span class="projects-tag">MongoDB</span>
+          <span class="projects-tag">MySQL</span>
+          <span class="projects-tag">Git</span>
+          <span class="projects-tag">Linux</span>
+        </div>
+        <p class="home-view-link">
+          <a href="{{ url_for('main.skills') }}">View all skills →</a>
+        </p>
+      </section>
+
+      <section class="home-section-block">
+        <h2>Featured Projects</h2>
+        <div class="home-featured-grid">
+          <article class="home-featured-card">
+            <h3>Deepfake Detection System</h3>
+            <p>
+              End‑to‑end pipeline using deep learning and REST APIs to detect
+              manipulated media with high accuracy.
+            </p>
+            <div class="home-chip-row">
+              <span class="projects-tag">Python</span>
+              <span class="projects-tag">Flask</span>
+              <span class="projects-tag">REST API</span>
+            </div>
+            <a href="{{ url_for('main.projects') }}" class="home-small-link">
+              View details →
+            </a>
+          </article>
+          <article class="home-featured-card">
+            <h3>Online Quiz Platform</h3>
+            <p>
+              Modular quiz app with authentication, result tracking, and a clean
+              responsive interface.
+            </p>
+            <div class="home-chip-row">
+              <span class="projects-tag">Python</span>
+              <span class="projects-tag">Flask</span>
+              <span class="projects-tag">HTML</span>
+              <span class="projects-tag">CSS</span>
+            </div>
+            <a href="{{ url_for('main.projects') }}" class="home-small-link">
+              View details →
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section-block home-edu-achievements">
+        <div class="home-edu">
+          <h2>Education</h2>
+          <div class="home-edu-grid">
+            <article class="home-edu-card">
+              <h3>M.Tech</h3>
+              <p>Computer Science (Information Security)</p>
+              <p class="home-meta">2023 – 2027</p>
+            </article>
+            <article class="home-edu-card">
+              <h3>B.Tech</h3>
+              <p>Computer Science &amp; Engineering</p>
+              <p class="home-meta">2019 – 2023</p>
+            </article>
+            <article class="home-edu-card">
+              <h3>Class XII</h3>
+              <p>Science Stream</p>
+              <p class="home-meta">2017 – 2019</p>
+            </article>
+            <article class="home-edu-card">
+              <h3>Class X</h3>
+              <p>Secondary Education</p>
+              <p class="home-meta">2017</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="home-achievements">
+          <h2>Achievement Highlights</h2>
+          <div class="home-edu-grid">
+            <article class="home-edu-card">
+              <h3>Academic Performance</h3>
+              <p>Consistent high scores in core CS subjects.</p>
+            </article>
+            <article class="home-edu-card">
+              <h3>Scholarships / Awards</h3>
+              <p>Placeholder for notable awards and scholarships.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}About | My Portfolio{% endblock %}
+
+{% block content %}
+  <section class="about-section">
+    <div class="container about-wrapper">
+      <header class="about-header">
+        <h1>About Me</h1>
+        <p>
+          Passionate about building robust systems, scalable web apps, and
+          exploring the intersection of development and security.
+        </p>
+      </header>
+
+      <div class="about-hero">
+        <div class="about-photo">
+          <img
+            src="{{ url_for('static', filename='images/profile.jpg') }}"
+            alt="Photo of Your Name"
+          />
+        </div>
+        <div class="about-text">
+          <h2>Who I Am</h2>
+          <p>
+            I’m a technology enthusiast with a strong interest in full‑stack
+            development, system design, and security. I enjoy turning complex
+            ideas into clean, well‑structured solutions.
+          </p>
+          <p>
+            Over the past few years I’ve worked on a variety of academic and
+            personal projects ranging from web applications to small machine
+            learning experiments. My toolkit includes Python, JavaScript,
+            Flask, and modern frontend technologies.
+          </p>
+          <p>
+            Outside of code, I like reading tech blogs, exploring new tools, and
+            continuously improving my problem‑solving skills.
+          </p>
+        </div>
+      </div>
+
+      <section class="about-timeline-section">
+        <h2>Education Timeline</h2>
+        <div class="about-timeline">
+          <article class="about-timeline-card">
+            <div class="about-timeline-year">2023 – 2027</div>
+            <h3>M.Tech in Computer Science</h3>
+            <p class="about-timeline-sub">
+              Specialization in Information Security
+            </p>
+            <p class="about-timeline-meta">
+              Institute / University Name
+            </p>
+          </article>
+
+          <article class="about-timeline-card">
+            <div class="about-timeline-year">2019 – 2023</div>
+            <h3>B.Tech in Computer Science &amp; Engineering</h3>
+            <p class="about-timeline-meta">
+              College / University Name
+            </p>
+          </article>
+
+          <article class="about-timeline-card">
+            <div class="about-timeline-year">2017 – 2019</div>
+            <h3>Class XII</h3>
+            <p class="about-timeline-meta">
+              Higher Secondary Education
+            </p>
+          </article>
+
+          <article class="about-timeline-card">
+            <div class="about-timeline-year">2017</div>
+            <h3>Class X</h3>
+            <p class="about-timeline-meta">
+              Secondary School Education
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-hobbies-section">
+        <h2>Hobbies &amp; Interests</h2>
+        <div class="about-hobbies-grid">
+          <article class="about-hobby-card">
+            <h3>Reading Tech Blogs</h3>
+            <p>
+              Staying updated with the latest trends, tools, and best practices
+              in software development and security.
+            </p>
+          </article>
+          <article class="about-hobby-card">
+            <h3>Exploring New Tools</h3>
+            <p>
+              Experimenting with new libraries, frameworks, and workflows to
+              improve productivity and code quality.
+            </p>
+          </article>
+          <article class="about-hobby-card">
+            <h3>Security Research</h3>
+            <p>
+              Learning about vulnerabilities, secure coding, and modern
+              defensive techniques.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+{% endblock %}
+
+
+
+

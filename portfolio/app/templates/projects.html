@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | My Portfolio{% endblock %}
+
+{% block content %}
+  <section class="projects-section">
+    <div class="container projects-wrapper">
+      <header class="projects-header">
+        <h1>Selected Projects</h1>
+        <p>
+          A closer look at some of the projects I’ve built, including the
+          problem statement, approach, and key results.
+        </p>
+      </header>
+
+      <div class="projects-stack">
+        <!-- Project 1 -->
+        <article class="projects-card">
+          <header class="projects-card-header">
+            <div>
+              <h2>Deepfake Detection System</h2>
+              <p class="projects-role">Full‑stack ML project • 2023</p>
+            </div>
+            <a href="#" class="projects-chip-link">View on GitHub</a>
+          </header>
+
+          <div class="projects-body">
+            <section>
+              <h3>Overview</h3>
+              <p>
+                An advanced deepfake detection pipeline leveraging deep learning
+                to identify manipulated video frames with high accuracy.
+              </p>
+            </section>
+
+            <section>
+              <h3>Problem Statement</h3>
+              <p>
+                With the rise of deepfake technology, there is an urgent need
+                for robust detection systems to identify manipulated media and
+                prevent misinformation.
+              </p>
+            </section>
+
+            <section>
+              <h3>Approach</h3>
+              <p>
+                Developed an end‑to‑end system combining feature extraction and
+                temporal analysis. Implemented data preprocessing, model
+                training, and evaluation using Python and popular ML libraries.
+              </p>
+              <div class="projects-meta-row">
+                <div>
+                  <h4 class="projects-label">Technologies Used</h4>
+                  <div class="projects-tags">
+                    <span class="projects-tag">Python</span>
+                    <span class="projects-tag">Flask</span>
+                    <span class="projects-tag">REST API</span>
+                    <span class="projects-tag">Deep Learning</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="projects-label">Datasets</h4>
+                  <div class="projects-tags">
+                    <span class="projects-tag">Public Deepfake Dataset</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h3>Key Results</h3>
+              <ul class="projects-bullets">
+                <li>Achieved high accuracy on test data.</li>
+                <li>Demonstrated robustness across different video qualities.</li>
+                <li>Documented system architecture and evaluation pipeline.</li>
+              </ul>
+            </section>
+
+            <div class="projects-diagram">
+              <p>System Architecture Diagram</p>
+              <span class="projects-diagram-note">Placeholder – add diagram image or diagram later.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="projects-card">
+          <header class="projects-card-header">
+            <div>
+              <h2>Online Quiz Platform</h2>
+              <p class="projects-role">Full‑stack web development • 2022</p>
+            </div>
+            <a href="#" class="projects-chip-link">View on GitHub</a>
+          </header>
+
+          <div class="projects-body">
+            <section>
+              <h3>Overview</h3>
+              <p>
+                A clean, modular quiz platform built with a Python backend and
+                responsive front‑end, featuring user authentication and result
+                tracking.
+              </p>
+            </section>
+
+            <section>
+              <h3>Problem Statement</h3>
+              <p>
+                Educators and organizations needed a reliable way to conduct
+                online assessments with flexible question sets and automatic
+                grading.
+              </p>
+            </section>
+
+            <section>
+              <h3>Approach</h3>
+              <p>
+                Designed a modular architecture with REST APIs for quiz
+                management, implemented secure login, and built an intuitive
+                interface for taking quizzes and reviewing scores.
+              </p>
+              <div class="projects-meta-row">
+                <div>
+                  <h4 class="projects-label">Technologies Used</h4>
+                  <div class="projects-tags">
+                    <span class="projects-tag">Python</span>
+                    <span class="projects-tag">Flask</span>
+                    <span class="projects-tag">HTML</span>
+                    <span class="projects-tag">CSS</span>
+                    <span class="projects-tag">JavaScript</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="projects-label">Database</h4>
+                  <div class="projects-tags">
+                    <span class="projects-tag">SQLite / MySQL</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h3>Key Results</h3>
+              <ul class="projects-bullets">
+                <li>Implemented user authentication and authorization.</li>
+                <li>Provided automatic grading and result summaries.</li>
+                <li>Designed responsive UI for desktop and mobile.</li>
+              </ul>
+            </section>
+
+            <div class="projects-diagram">
+              <p>System Architecture Diagram</p>
+              <span class="projects-diagram-note">Placeholder – add diagram image or diagram later.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <footer class="projects-footer-note">
+        <p>
+          More projects coming soon — I’m actively working on new ideas in
+          full‑stack development, machine learning, and security.
+        </p>
+      </footer>
+    </div>
+  </section>
+{% endblock %}
